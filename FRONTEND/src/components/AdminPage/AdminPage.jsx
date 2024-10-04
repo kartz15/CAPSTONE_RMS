@@ -21,7 +21,7 @@ const AdminPage = () => {
         formData.append('category', category);
 
         try {
-            const response = await axios.post('http://localhost:5000/dishes', formData, {
+            const response = await axios.post('http://localhost:5000/api/dishes/dishes', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },

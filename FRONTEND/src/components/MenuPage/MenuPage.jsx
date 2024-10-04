@@ -10,7 +10,7 @@ const MenuPage = () => {
     useEffect(() => {
         const fetchDishes = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/restaurants/dishes');
+                const response = await axios.get('http://localhost:5000/api/dishes');
                 setDishes(response.data);
                 setLoading(false);
             } catch (err) {

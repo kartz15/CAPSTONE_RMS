@@ -56,7 +56,7 @@ const dishSchema = new mongoose.Schema({
     },
     category: {
         type: String,
-        enum: ['Appetizer', 'Main Course', 'Dessert', 'Beverage'], // Example categories
+        enum: ['Appetizer', 'Main Course', 'Dessert', 'Beverage'], 
         required: true,
     },
     createdAt: {
