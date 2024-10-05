@@ -1,4 +1,4 @@
-const Dish = require('../models/dish');
+const Category = require('../models/category'); 
 const cloudinary = require('../cloudinaryConfig');
 
 // Test Cloudinary connection
@@ -10,20 +10,23 @@ cloudinary.api.ping()
         console.error('Error connecting to Cloudinary:', error);
     });
 
-// Fetch all dishes
-const getAllDishes = async (req, res) => {
+// Fetch all categories
+const getAllCategories = async (req, res) => {
     try {
-        const dishes = await Dish.find();
-        res.json(dishes);
+        const categories = await Category.find();
+        res.json(categories);
     } catch (error) {
-        console.error('Error fetching dishes:', error);
         res.status(500).json({ message: 'Server error' });
     }
 };
 
-// Upload dish
-const uploadDish = async (req, res) => {
-    const { name, description, price, category } = req.body;
+// Create a new category
+const uploadCategory = async (req, res) => {
+    const { name } = req.body; // Removed image from body since it's uploaded
+
+    if (!name) {
+        return res.status(400).json({ message: 'Name is required' });
+    }
 
     if (!req.file) {
         return res.status(400).json({ message: 'Image file is required' });
@@ -37,20 +40,17 @@ const uploadDish = async (req, res) => {
         const result = await cloudinary.uploader.upload(req.file.path);
         console.log('Upload result:', result);
 
-        const dish = new Dish({
+        const newCategory = new Category({
             name,
-            description,
-            price,
-            image: result.secure_url,
-            category,
+            image: result.secure_url // Use the URL from Cloudinary
         });
 
-        await dish.save();
-        return res.status(201).json(dish);
+        await newCategory.save();
+        return res.status(201).json(newCategory);
     } catch (error) {
         console.error('Error uploading to Cloudinary:', error);
-        return res.status(500).json({ message: 'Server error', error: error.message });
+        return res.status(500).json({ message: 'Error creating category', error });
     }
 };
 
-module.exports = { getAllDishes, uploadDish };
+module.exports = { getAllCategories, uploadCategory };

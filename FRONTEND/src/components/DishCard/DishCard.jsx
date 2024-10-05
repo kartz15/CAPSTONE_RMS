@@ -8,7 +8,8 @@ const DishCard = ({ dish }) => {
             <h3>{dish.name}</h3>
             <p>{dish.description}</p>
             <p>${dish.price.toFixed(2)}</p>
-            {dish.image && <img src={imageUrl} alt={dish.name} />}
+            {dish.image  && <img src = {dish.image} alt = {dish.name} /> }
+            {/* {dish.image && <img src={imageUrl} alt={dish.name} />} */}
         </div>
     );
 };

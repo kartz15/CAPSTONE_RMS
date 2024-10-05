@@ -1,26 +1,24 @@
 const express = require('express');
-const { getAllDishes, uploadDish } = require('../controllers/dishController');
+const Category = require('../models/category');
+const router = express.Router();
 const multer = require('multer');
 const { CloudinaryStorage } = require('multer-storage-cloudinary'); // Correct import
 const cloudinary = require('../cloudinaryConfig');
+const { getAllCategories, uploadCategory } = require('../controllers/categoryController');
 
 // Set up multer storage using Cloudinary
 const storage = new CloudinaryStorage({
     cloudinary: cloudinary,
     params: {
-        folder: 'DishMenu', // Optional: Specify a folder name in Cloudinary
+        folder: 'CategoryItems', // Optional: Specify a folder name in Cloudinary
         allowed_formats: ['jpg', 'png', 'jpeg'], // Use 'allowed_formats' instead of 'allowedFormats'
     },
 });
 
 const upload = multer({ storage });
 
-const router = express.Router();
+router.get('/', getAllCategories);
+router.post('/', upload.single('image'), uploadCategory);
 
-// GET all dishes
-router.get('/', getAllDishes);
-
-// Route for uploading dishes
-router.post('/', upload.single('image'), uploadDish);
-
+// You can add more endpoints like updating and deleting categories as needed
 module.exports = router;
