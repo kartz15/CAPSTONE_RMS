@@ -35,7 +35,7 @@ header {
 .nav_links {
     display: flex; 
     gap: 20px;
-    font-size: 22px;
+    font-size: 20px;
     align-items:end;
 
 }
@@ -48,7 +48,7 @@ header {
     letter-spacing: -0.5px; 
     line-height: 26px; 
     font-stretch: condensed; 
-    font-weight: bold;
+    font-weight:500;
 }
 
 .nav_link:hover {
