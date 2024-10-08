@@ -17,6 +17,10 @@ const dishSchema = new mongoose.Schema({
         type: String, // This will store the path to the uploaded image
         required: true,
     },
+    public_id: {
+        type: String, // Cloudinary public ID for the image
+        required: true,
+    },
     // category: {
     //     type: String,
     //     enum: ['Appetizer', 'Main Course', 'Dessert', 'Beverage'], 

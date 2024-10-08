@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './RegisterPage.css'; 
+import {  Link } from 'react-router-dom';
 
 const RegisterPage = () => {
     const [username, setUsername] = useState('');
@@ -12,7 +13,7 @@ const RegisterPage = () => {
         setError('');
 
         try {
-            const response = await axios.post('http://localhost:5000/register', {
+            const response = await axios.post('http://localhost:5000/api/users/register', {
                 username,
                 password,
             });
@@ -45,6 +46,7 @@ const RegisterPage = () => {
                 />
                 <button type="submit">Register</button>
             </form>
+            <Link className="login-link" to="/login">Have an account? Login Here</Link>
         </div>
     );
 };

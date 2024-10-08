@@ -1,5 +1,5 @@
 const express = require('express');
-const { getAllDishes, uploadDish } = require('../controllers/dishController');
+const { getAllDishes, uploadDish , updateDish,getDishById,deleteDish} = require('../controllers/dishController');
 const multer = require('multer');
 const { CloudinaryStorage } = require('multer-storage-cloudinary'); // Correct import
 const cloudinary = require('../cloudinaryConfig');
@@ -19,8 +19,9 @@ const router = express.Router();
 
 // GET all dishes
 router.get('/', getAllDishes);
-
-// Route for uploading dishes
+router.get('/:id', getDishById); // Add this line to handle GET by ID
 router.post('/', upload.single('image'), uploadDish);
+router.put('/:id', upload.single('image'), updateDish);
+router.delete('/:id', deleteDish); // Add this line for delete
 
 module.exports = router;

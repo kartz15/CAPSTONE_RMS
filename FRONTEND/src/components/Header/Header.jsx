@@ -1,18 +1,21 @@
-import React from 'react';
+// import React from 'react';
 import { Link } from 'react-router-dom';
-import './Header.css'; // Import the CSS file
+import './Header.css'; 
 
-const Header = () => {
+const Header = ({ cartCount }) => { 
     return (
         <header>
-            <h1>Kartz Hub</h1>
-            <nav>
-                <div className="nav-links">
-                    <Link className="nav-link" to="/">Home</Link>
-                    <Link className="nav-link" to="/menu">Menu</Link>
-                    <Link className="nav-link" to="/admin">Admin</Link>
-                    <Link className="nav-link" to="/login">Login</Link>
-                    <Link className="nav-link" to="/register">Register</Link>
+            <nav className="nav_container">
+                <div className="nav_logo">
+                    <Link to="/"><img src="/logos/chef.jpg" alt="Site Logo" className="logo" /></Link>
+                </div>
+                <div className="nav_links">
+                    <Link className="nav_link" id="nav_id" to="/menu">ORDER NOW</Link>
+                    <Link className="nav_link" to="/">Home</Link>
+                    <Link className="nav_link" to="/menu">Menu</Link>
+                    <Link className="nav_link" to="/login">Sign In</Link> 
+                    <Link className="nav_link" to="/cart">Cart ({cartCount})</Link> 
+                    <Link className='nav_link' to="/order-history">Orders</Link>
                 </div>
             </nav>
         </header>

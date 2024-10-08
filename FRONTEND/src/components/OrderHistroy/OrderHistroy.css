@@ -1,0 +1,37 @@
+.order-history-container {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.order-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.order-item {
+    margin: 15px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.order-details {
+    margin-bottom: 10px;
+}
+
+.order-item-details {
+    margin: 5px 0;
+}
+
+.error {
+    color: red;
+    text-align: center;
+}

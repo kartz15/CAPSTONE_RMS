@@ -5,3 +5,14 @@
   margin: 0 auto; 
   padding: 20px; 
 } */
+
+
+.nav_titlebar{
+  border: #000000;
+  background-color:#06baba;
+  font-family: Forum;
+  font-size: 16px;
+  text-align:center;
+  height:30px;
+  padding:12px;
+}

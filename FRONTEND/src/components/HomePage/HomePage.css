@@ -3,58 +3,102 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.header {
-    background-color: #343a40;
-    color: white;
-    padding: 20px;
+.home-page {
+    background-color: white;
 }
 
-.header h1 {
-    margin: 0;
-}
-
-.header nav {
-    margin-top: 10px;
-}
-
-.header a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-}
-
-.header a:hover {
-    text-decoration: underline;
-}
-
-.main {
+.main_section {
     text-align: center;
-    padding: 20px;
-    background-color: #f8f9fa;
-}
-
-.main h2 {
-    margin-top: 20px;
-}
-
-.main img {
+    padding: 0; 
     width: 100%;
-    max-height: 400px; 
-    object-fit: contain; 
-    border-radius: 8px; 
+    height: calc(100vh - 120px);
+    background-image: url("/logos/res.gif");
+    background-size: cover; 
+    background-position: top; 
 }
 
 .order-button {
-    margin-top: 20px; 
-    padding: 10px 20px; 
-    font-size: 16px; 
+    display: flex;
+    justify-content: center; 
+    margin: 20px 0; 
+}
+
+.order-btn {
+    padding: 15px 30px; 
+    font-size: 18px;
     color: white; 
-    background-color: #007bff;
+    background-color: #007bff; 
     border: none;
     border-radius: 5px; 
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
 }
 
-.order-button:hover {
+.order-btn:hover {
     background-color: #0056b3; 
+    transform: scale(1.05); 
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .order-btn {
+        padding: 12px 24px; 
+        font-size: 16px; 
+    }
+
+    .main_section {
+        height: calc(100vh - 100px); 
+    }
+
+    .chef-section {
+        flex-direction: column;
+        align-items: center; 
+    }
+}
+
+@media (max-width: 480px) {
+    .main_section {
+        height: calc(100vh - 80px); 
+    }
+
+    .order-btn {
+        font-size: 14px; 
+    }
+}
+
+.chef-section {
+    background-color: #f8f9fa; 
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 8px; 
+    display: flex;
+    padding: 20px; 
+}
+
+.chef_image {
+    flex: 1; 
+    max-width: 150px; 
+    margin-right: 20px;
+}
+
+.chef_image img {
+    width: 100%; 
+    border-radius: 50%; 
+}
+
+.chef_content {
+    flex: 2; 
+}
+
+.chef-section h2 {
+    font-size: 24px; 
+    margin-bottom: 15px;
+    color: #333; 
+}
+
+.chef-section p {
+    font-size: 16px; 
+    color: #555; 
+    line-height: 1.6; 
 }

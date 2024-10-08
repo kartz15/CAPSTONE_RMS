@@ -1,25 +1,25 @@
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
     align-items: center;
     padding: 10px 20px;
-    background-color: #d6dbe0;
+    background-color: black;
     color: rgb(21, 4, 4);
 }
 
 .navbar-links {
     display: flex;
     align-items: center;
-    justify-content: space-around;
 }
 
-.navbar span {
+.welcome-message {
     font-size: 20px; 
     font-weight: 300;
-    color: rgb(24, 14, 19);
+    color:white;
+    margin-right: 15px; 
 }
 
-.navbar button {
+.logout-button {
     background-color: transparent; 
     color: rgb(206, 17, 17); 
     border: none; 
@@ -27,8 +27,9 @@
     font-size: 20px; 
     padding: 5px 10px; 
     transition: background-color 0.3s; 
+    margin-left: auto; 
 }
 
-.navbar button:hover {
+.logout-button:hover {
     background-color: rgba(59, 60, 155, 0.2); 
 }

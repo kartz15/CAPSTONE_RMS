@@ -1,0 +1,42 @@
+.order-summary-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.order-summary-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.order-detail {
+    margin: 10px 0;
+}
+
+.order-detail label {
+    font-weight: bold;
+}
+
+.order-detail-value {
+    margin-left: 10px;
+}
+
+.order-summary-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.order-summary-button:hover {
+    background-color: #0056b3;
+}

@@ -1,4 +1,4 @@
-const Category = require('../models/category'); 
+const Category = require('../models/category'); // Correctly import the model
 const cloudinary = require('../cloudinaryConfig');
 
 // Test Cloudinary connection
