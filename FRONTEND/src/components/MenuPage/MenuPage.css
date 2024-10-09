@@ -10,10 +10,9 @@
 
 .menu-title {
     font-family: 'Arial', sans-serif; 
-    font-size: 30px; 
-    color:  #06baba; 
-    margin-bottom: 20px;
-
+    font-size: 40px; 
+    color: rgb(23, 21, 21); 
+    margin-bottom: 30px;
 }
 
 .category-container {
@@ -24,14 +23,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px; 
+    gap: 50px; 
 }
 
 .category-card {
     border: none; 
-    border-radius: 12px;
     padding: 10px;
-    width: 160px; 
+    width: 300px; 
+    height: 300px;
     text-align: center;
     cursor: pointer;
     background-color: #e9ecef; 
@@ -45,15 +44,16 @@
 
 .category-name {
     font-weight: bold;
+    margin-top: 10px; 
     margin-bottom: 10px; 
+    font-size: 20px;
 }
 
 .category-image {
     width: 100%;
-    height: 120px; 
+    height: 90%;
     background-size: cover;
     background-position: center;
-    border-radius: 8px; 
 }
 
 .dish-grid {
@@ -85,7 +85,6 @@
     text-overflow: ellipsis; 
 }
 
-
 .dish-card:hover {
     transform: scale(1.03); 
 }
@@ -116,10 +115,8 @@
     background-color: #0a8383; 
 }
 
-
 .loading, .error {
     color: #dc3545; 
     font-size: 1.5em;
     margin: 20px 0;
 }
-

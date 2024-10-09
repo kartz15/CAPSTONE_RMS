@@ -7,7 +7,7 @@ const Header = ({ cartCount }) => {
         <header>
             <nav className="nav_container">
                 <div className="nav_logo">
-                    <Link to="/"><img src="/logos/chef.jpg" alt="Site Logo" className="logo" /></Link>
+                    <Link to="/"><img src="/logos/logokar.jpg" alt="Site Logo" className="logo" /></Link>
                 </div>
                 <div className="nav_links">
                     <Link className="nav_link" id="nav_id" to="/menu">ORDER NOW</Link>

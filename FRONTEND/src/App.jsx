@@ -9,8 +9,10 @@ import LoginPage from './components/LoginPage/LoginPage';
 import CartPage from './components/CartPage/CartPage';
 import Navbar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
-import OrderSummaryPage from './components/OrderSummaryPage/OrderSummaryPage'; 
+// import OrderSummaryPage from './components/OrderSummaryPage/OrderSummaryPage'; 
 import OrderHistory from './components/OrderHistroy/OrderHistroy';
+import CategoryDishesPage from './components/MenuPage/CategoryDishesPage';
+
 import './App.css'
 
 
@@ -44,8 +46,23 @@ const App = () => {
         navigate('/login'); 
     };
 
+    // const addToCart = (dish) => {
+    //     setCart((prevCart) => [...prevCart, dish]);
+    // };
+
     const addToCart = (dish) => {
-        setCart((prevCart) => [...prevCart, dish]);
+        setCart((prevCart) => {
+            const existingItemIndex = prevCart.findIndex(item => item._id === dish._id);
+            
+            if (existingItemIndex !== -1) {
+                const updatedCart = [...prevCart];
+                updatedCart[existingItemIndex].quantity += dish.quantity; // Update quantity
+                return updatedCart;
+            } else {
+                return [...prevCart, dish]; // Add new item
+                
+            }
+        });
     };
 
     const removeFromCart = (id) => {
@@ -59,7 +76,8 @@ const App = () => {
     return (
         <>
             <div className="nav_titlebar">Win $500! Enter by writing a dish review to help others. Drawing 11/1</div>
-            <Header cartCount={cart.length} /> 
+            {/* <Header cartCount={cart.length} />  */}
+            <Header cartCount={cart.reduce((total, item) => total + item.quantity, 0)} /> {/* Update cart count */}
             <Navbar username={username} onLogout={handleLogout} />
             <Routes>
                 <Route path="/" element={<HomePage />} />
@@ -68,8 +86,9 @@ const App = () => {
                 <Route path="/login" element={token ? <Navigate to={username === "admin" ? "/admin" : "/"} /> : <LoginPage setToken={handleSetToken}/>} />
                 <Route path="/register" element={token ? <Navigate to="/" /> : <RegisterPage />} />
                 <Route path="/cart" element={<CartPage cart={cart} removeFromCart={removeFromCart} clearCart={clearCart} username={username} />} />
-                <Route path="/order-summary/:orderId" element={<OrderSummaryPage />} />
+                {/* <Route path="/order-summary/:orderId" element={<OrderSummaryPage />} /> */}
                 <Route path="/order-history" element={<OrderHistory username={username} />} />
+                <Route path="/category/:categoryId" element={<CategoryDishesPage  addToCart={addToCart} />} />
             </Routes>
             <Footer />
         </>

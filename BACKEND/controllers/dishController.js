@@ -67,7 +67,7 @@ cloudinary.api.ping()
         console.error('Error connecting to Cloudinary:', error);
     });
 
-// Fetch all dishes
+// // Fetch all dishes
 const getAllDishes = async (req, res) => {
     try {
         const dishes = await Dish.find();
@@ -77,6 +77,38 @@ const getAllDishes = async (req, res) => {
         res.status(500).json({ message: 'Server error' });
     }
 };
+
+// // Fetch all dishes with optional category filter
+// const getAllDishesbycategory = async (req, res) => {
+//     const { category } = req.query; // Get category from query parameters
+
+//     try {
+//         const filter = category ? { category } : {}; // Filter by category if provided
+//         const dishes = await Dish.find(filter).populate('category'); // Populate category info
+//         res.json(dishes);
+//     } catch (error) {
+//         console.error('Error fetching dishes:', error);
+//         res.status(500).json({ message: 'Server error' });
+//     }
+// };
+const getAllDishesbycategory = async (req, res) => {
+    const { id } = req.params; // Get category ID from URL parameters
+
+    try {
+        // Filter by category ID
+        const dishes = await Dish.find({ category: id }).populate('category'); // Populate category info
+        
+        if (dishes.length === 0) {
+            return res.status(404).json({ message: 'No dishes found for this category' });
+        }
+        
+        res.json(dishes);
+    } catch (error) {
+        console.error('Error fetching dishes:', error);
+        res.status(500).json({ message: 'Server error' });
+    }
+};
+
 
 const getDishById = async (req, res) => {
     const { id } = req.params;
@@ -273,4 +305,4 @@ const deleteDish = async (req, res) => {
 };
 
 
-module.exports = { getAllDishes, uploadDish, updateDish ,getDishById ,deleteDish} ;
+module.exports = { getAllDishes,getAllDishesbycategory, uploadDish, updateDish ,getDishById ,deleteDish} ;
