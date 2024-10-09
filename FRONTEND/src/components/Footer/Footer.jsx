@@ -6,13 +6,13 @@ const Footer = () => {
         <footer className="footer">
             <div className='footer-social'>
                 <div className="social-media">
-                    <a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
                         <i className="fab fa-facebook"></i>
                     </a>
-                    <a href="https://www.instagram.com/yourpage" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
                         <i className="fab fa-instagram"></i>
                     </a>
-                    <a href="https://www.youtube.com/yourchannel" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
                         <i className="fab fa-youtube"></i>
                     </a>
                 </div>
@@ -20,11 +20,11 @@ const Footer = () => {
             <div className="footer-content">
                 <div className="footer-section">
                     <h3>Location</h3>
-                    <p>Jabbar Bhai Biryani Restaurant</p>
-                    <p>3291 Independence Pkwy Suite 400</p>
-                    <p>Plano, TX 75075</p>
-                    <p>(469) 969-2255</p>
-                    <p>info@jabbarbhaibiryanitx.com</p>
+                    <p>Kar Restaurant</p>
+                    <p>2800 W Big Beaver Rd Ste Y-323</p>
+                    <p>Troy, MI 48084</p>
+                    <p>(248) 600-955X</p>
+                    <p>info@kar.com</p>
                 </div>
                 <div className="footer-section">
                     <h3>Hours</h3>
@@ -34,7 +34,7 @@ const Footer = () => {
                 <div className="footer-section">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="/order">Order Online</a></li>
+                        <li><a href="/menu">Order Online</a></li>
                         <li><a href="/menu">View Our Menu</a></li>
                         <li><a href="/register">Join Us!</a></li>
                         <li><a href="/about">About Us</a></li>
@@ -43,7 +43,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="footer-bottom">
-                <p>&copy; {new Date().getFullYear()} Jabbar Bhai Biryani Restaurant. All rights reserved.</p>
+                <p>&copy; {new Date().getFullYear()} KAR Food Hub. All rights reserved.</p>
             </div>
         </footer>
     );

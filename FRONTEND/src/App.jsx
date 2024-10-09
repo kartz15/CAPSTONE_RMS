@@ -75,7 +75,7 @@ const App = () => {
 
     return (
         <>
-            <div className="nav_titlebar">Win $500! Enter by writing a dish review to help others. Drawing 11/1</div>
+            <div className="nav_titlebar"> Win $500! 🌟 Order any dish online for a chance to snag $500! 🌟 Drawing on November 1st—don’t miss out!</div>
             {/* <Header cartCount={cart.length} />  */}
             <Header cartCount={cart.reduce((total, item) => total + item.quantity, 0)} /> {/* Update cart count */}
             <Navbar username={username} onLogout={handleLogout} />

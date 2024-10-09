@@ -1,4 +1,4 @@
-body {
+/* body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
@@ -27,7 +27,7 @@ body {
     padding: 15px 30px; 
     font-size: 18px;
     color: white; 
-    background-color: #007bff; 
+    background-color:#06baba;
     border: none;
     border-radius: 5px; 
     cursor: pointer;
@@ -36,11 +36,11 @@ body {
 }
 
 .order-btn:hover {
-    background-color: #0056b3; 
+    background-color:#53e6e6;
     transform: scale(1.05); 
 }
 
-/* Responsive styles */
+
 @media (max-width: 768px) {
     .order-btn {
         padding: 12px 24px; 
@@ -101,4 +101,261 @@ body {
     font-size: 16px; 
     color: #555; 
     line-height: 1.6; 
+}
+
+
+.welcome-section {
+    background-color: #f8f9fa;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.welcome-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.welcome-section p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.menu-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    width: 100%;
+}
+
+.menu-images img {
+    width: calc(33.33% - 20px); 
+    height: auto;
+    margin: 10px;
+    border-radius: 8px; 
+}
+
+
+@media (max-width: 768px) {
+    .menu-images img {
+        width: calc(50% - 20px); 
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-images img {
+        width: calc(100% - 20px); 
+    }
+}
+
+
+.welcome-section,
+.chef-section {
+    background-color: #f8f9fa;
+    max-width: 100%; 
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.welcome-section h2,
+.chef-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.welcome-section p,
+.chef-section p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.chef-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.chef_image {
+    flex: 1;
+    max-width: 150px;
+    margin-right: 20px;
+}
+
+.chef_image img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.chef_content {
+    flex: 2;
+} */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.home-page {
+    background-color: white;
+}
+
+.main_section {
+    text-align: center;
+    padding: 0; 
+    width: 100%;
+    height: calc(100vh - 120px);
+    background-image: url("/logos/res.gif");
+    background-size: cover; 
+    background-position: top; 
+}
+
+.order-button {
+    display: flex;
+    justify-content: center; 
+    margin: 20px 0; 
+}
+
+.order-btn {
+    padding: 15px 30px; 
+    font-size: 18px;
+    color: white; 
+    background-color: #06baba;
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.order-btn:hover {
+    background-color: #53e6e6;
+    transform: scale(1.05); 
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .order-btn {
+        padding: 12px 24px; 
+        font-size: 16px; 
+    }
+
+    .main_section {
+        height: calc(100vh - 100px); 
+    }
+}
+
+@media (max-width: 480px) {
+    .main_section {
+        height: calc(100vh - 80px); 
+    }
+
+    .order-btn {
+        font-size: 14px; 
+    }
+}
+
+.welcome-section,
+.chef-section {
+    background-color: #f8f9fa;
+    width: 85%; /* Full width */
+    margin: 60px auto;
+    padding: 100px;
+    /* border-radius: 8px; */
+    text-align: center;
+}
+
+.welcome-section h2,
+.chef-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.welcome-section p,
+.chef-section p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Adjust chef-section to use flexbox for responsive layout */
+.chef-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: left;
+
+}
+
+.chef_image {
+    flex: 1;
+    max-width: 350px;
+    margin-right: 20px;
+}
+
+.chef_image img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.chef_content {
+    flex: 2;
+}
+
+.menu-section {
+    background-color: #f8f9fa;
+    width: 95%; /* Full width */
+    margin: 10px auto;
+    padding: 20px;
+    /* border-radius: 8px; */
+    text-align: center;
+}
+
+.menu-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.menu-section p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.menu-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    width: 100%; 
+}
+
+.menu-images img {
+    width: calc(33.33% - 20px); /* Three images per row with spacing */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px;
+    border-radius: 8px; /* Optional */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .menu-images img {
+        width: calc(50% - 20px); /* Two images per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-images img {
+        width: calc(100% - 20px); /* One image per row */
+    }
 }
