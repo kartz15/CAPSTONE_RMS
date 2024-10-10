@@ -6,11 +6,11 @@ const Navbar = ({ username, onLogout }) => {
         <nav className="navbar">
             <div className="navbar-links">
                 {username && (
-                    <span className="welcome-message">Welcome {username}!</span>
+                    <span className="welcome-message">Welcome {username} !</span>
                 )}
             </div>
             {username && (
-                <button onClick={onLogout} className="logout-button">Logout</button>
+                <button onClick={onLogout} className="logout-button">Signout</button>
             )}
         </nav>
     );

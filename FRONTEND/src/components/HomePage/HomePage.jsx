@@ -147,7 +147,7 @@ const HomePage = () => {
             </div>
             {/* Welcome Section */}
             <div className="welcome-section">
-                <h2>Welcome to Kar!</h2>
+                <h2>Welcome to Kar Food Hub !</h2>
                 <p>
                     At Kar, we’re passionate about serving delicious fast food that brings people together. 
                     Located in the heart of Troy, Michigan, our restaurant offers a diverse menu featuring 
@@ -158,14 +158,14 @@ const HomePage = () => {
             </div>
             {/* Menu Section */}
             <div className="menu-section">
-                <h2>Our Menu</h2>
-                <p>The menu is a mix of Indian cuisines from all parts of India. Be sure to ask us about the daily specials!</p>
+                {/* <h2>Our Menu</h2>
+                <p>The menu is a mix of Indian cuisines from all parts of India. Be sure to ask us about the daily specials!</p> */}
                 <div className="menu-images">
-                    <img src="/fav/breakfast.jpg" alt="Breakfast" />
                     <img src="/fav/Entreees.png" alt="Entrees" />
+                     <img src="/fav/salads.jpg" alt="Salad" />
+                    {/* <img src="/fav/breakfast.jpg" alt="Breakfast" /> */}
                     <img src="/fav/Honey Pepper Pimento Sandwich.png" alt="Sandwich" />
-                    <img src="/fav/kidsmeals.jpg" alt="Kids Meals" />
-                    <img src="/fav/salads.jpg" alt="Salad" />
+                    {/* <img src="/fav/kidsmeals.jpg" alt="Kids Meals" /> */}
                 </div>
             </div>
             {/* Chef Section */}

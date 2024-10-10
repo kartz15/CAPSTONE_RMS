@@ -3,8 +3,9 @@
     justify-content: space-between; 
     align-items: center;
     padding: 10px 20px;
-    background-color: black;
-    color: rgb(21, 4, 4);
+    background-color: #0f1012;
+      /* background-image: url("/logos/header.jpg"); */
+    color:black;
 }
 
 .navbar-links {
@@ -14,7 +15,7 @@
 
 .welcome-message {
     font-size: 20px; 
-    font-weight: 300;
+    font-weight: 700;
     color:white;
     margin-right: 15px; 
 }

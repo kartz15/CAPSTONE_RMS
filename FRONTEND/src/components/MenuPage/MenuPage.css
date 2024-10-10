@@ -1,4 +1,4 @@
-.menu-container {
+/* .menu-container {
     max-width: 1500px;
     margin: 20px auto;
     padding: 20px;
@@ -68,7 +68,6 @@
     flex-direction: column; 
     justify-content: space-between; 
     border: 1px solid #ccc;
-    border-radius: 10px;
     padding: 15px;
     width: 220px;
     text-align: center;
@@ -113,6 +112,70 @@
 .dish-card button:active {
     transform: translateY(0); 
     background-color: #0a8383; 
+}
+
+.loading, .error {
+    color: #dc3545; 
+    font-size: 1.5em;
+    margin: 20px 0;
+} */
+
+.menu-container {
+    max-width: 1500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff; 
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+    text-align: center;
+}
+
+.menu-title {
+    font-family: 'Arial', sans-serif; 
+    font-size: 40px; 
+    color: rgb(23, 21, 21); 
+    margin-bottom: 30px;
+}
+
+.category-container {
+    margin-bottom: 20px;
+}
+
+.category-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;  /* Adjusted for consistency */
+}
+
+.category-card {
+    padding: 10px;
+    width: 300px; 
+    height: 300px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #e9ecef; 
+    transition: transform 0.3s, background-color 0.3s;
+    border: none; /* Ensure no borders */
+}
+
+.category-card:hover {
+    transform: translateY(-5px); 
+    background-color: #dee2e6; 
+}
+
+.category-name {
+    font-weight: bold;
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+    font-size: 20px;
+}
+
+.category-image {
+    width: 100%;
+    height: 90%;
+    background-size: cover;
+    background-position: center;
 }
 
 .loading, .error {

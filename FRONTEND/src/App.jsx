@@ -11,7 +11,7 @@ import Navbar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
 // import OrderSummaryPage from './components/OrderSummaryPage/OrderSummaryPage'; 
 import OrderHistory from './components/OrderHistroy/OrderHistroy';
-import CategoryDishesPage from './components/MenuPage/CategoryDishesPage';
+import CategoryDishesPage from './components/MenuPage/CategoryDishesPage/CategoryDishesPage';
 
 import './App.css'
 

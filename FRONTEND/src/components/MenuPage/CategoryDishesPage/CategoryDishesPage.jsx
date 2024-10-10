@@ -191,10 +191,12 @@
 // };
 
 // export default CategoryDishesPage;
+
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import './CategoryDishesPage.css'; // Make sure to import your CSS file
+import './CategoryDishesPage.css';
+
 
 const CategoryDishesPage = ({ addToCart }) => {
     const { categoryId } = useParams();
@@ -203,7 +205,7 @@ const CategoryDishesPage = ({ addToCart }) => {
     const [categories, setCategories] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
-    const [selectedCategory, setSelectedCategory] = useState(categoryId); // Track selected category
+    const [selectedCategory, setSelectedCategory] = useState(categoryId); 
 
     useEffect(() => {
         const fetchDishesByCategory = async () => {
@@ -238,7 +240,7 @@ const CategoryDishesPage = ({ addToCart }) => {
     };
 
     const handleBackToMenu = () => {
-        navigate('/menu'); // Navigate back to the menu page
+        navigate('/menu'); 
     };
 
     if (loading) return <h2>Loading...</h2>;
