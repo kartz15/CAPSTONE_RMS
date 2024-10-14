@@ -1,0 +1,101 @@
+
+.title {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.back-menu {
+    font-size: 24px;
+    cursor: pointer;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.category-selector {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px; 
+    margin-bottom: 20px;
+}
+
+.category-selector button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4d759c; 
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.category-selector button:hover {
+    background-color: #dee2e6;
+}
+
+.category-selector button.active {
+    background-color: #06baba; 
+    color: rgb(13, 10, 10);
+}
+
+.dish-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 40px; 
+    justify-items: center;
+}
+
+.dish-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #f1f1f1;
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.dish-card:hover {
+    transform: scale(1.03); 
+}
+
+.dish-card img {
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+.dish-card p.description {
+    flex-grow: 1; 
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+
+.dish-card button {
+    background-color: #06baba; 
+    color: white;
+    border: none; 
+    padding: 10px 15px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+.dish-card button:hover {
+    background-color: #009999; 
+}
+
+.success-message {
+    color: green;
+    margin-top: 10px;
+}
+
+
+.dish-card,
+.dish-card img,
+.dish-card button {
+    border-radius: 0; 
+}

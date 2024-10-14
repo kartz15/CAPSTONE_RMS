@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.home-page {
+    background-color: white;
+}
+
+.main_section {
+    text-align: center;
+    padding: 0; 
+    width: 100%;
+    height: calc(100vh - 120px);
+    /* background-image: url("/logos/res.gif"); */
+    background-image: url("/logos/adobe-video.gif");
+    background-size: cover; 
+    background-position: center; 
+}
+
+.order-button {
+    display: flex;
+    justify-content: center; 
+    margin: 20px 0; 
+}
+
+.order-btn {
+    padding: 15px 30px; 
+    font-size: 18px;
+    color: white; 
+    background-color: #06baba;
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.order-btn:hover {
+    background-color: #53e6e6;
+    transform: scale(1.05); 
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .order-btn {
+        padding: 12px 24px; 
+        font-size: 16px; 
+    }
+
+    .main_section {
+        height: calc(100vh - 100px); 
+    }
+}
+
+@media (max-width: 480px) {
+    .main_section {
+        height: calc(100vh - 80px); 
+    }
+
+    .order-btn {
+        font-size: 14px; 
+    }
+}
+
+.welcome-section,
+.chef-section {
+    background-color: #f8f9fa;
+    width: 90%; 
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.welcome-section h2,
+.chef-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.welcome-section p,
+.chef-section p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.chef-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.chef_image {
+    flex: 1;
+    max-width: 200px;
+    margin: 10px;
+}
+
+.chef_image img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.chef_content {
+    flex: 2;
+    max-width: 400px; 
+}
+
+.menu-section {
+    background-color: #f8f9fa;
+    width: 90%; 
+    margin: 20px auto;
+    padding: 20px;
+    /* border-radius: 8px; */
+    text-align: center;
+}
+
+.menu-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.menu-section p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.menu-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    width: 100%; 
+}
+
+.menu-images img {
+    width: calc(33.33% - 20px); 
+    height: auto; 
+    margin: 10px;
+    border-radius: 8px; 
+}
+
+@media (max-width: 768px) {
+    .menu-images img {
+        width: calc(50% - 20px); 
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-images img {
+        width: calc(100% - 20px); 
+    }
+}
