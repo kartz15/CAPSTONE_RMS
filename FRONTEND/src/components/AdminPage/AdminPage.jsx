@@ -74,8 +74,7 @@ const AdminPage = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-         // Validate if image is required and not provided
-        if (!image && !editingDishId) { // If editing, image can be optional
+        if (!image && !editingDishId) { 
             showSuccessMessage('Please select an image for the dish.');
             return;
         }
@@ -121,7 +120,6 @@ const AdminPage = () => {
         setEditingDishId(null);
         setIsModalOpen(false);
 
-        // Reset the file input manually
         const fileInput = document.querySelector('input[type="file"]');
         if (fileInput) {
             fileInput.value = '';

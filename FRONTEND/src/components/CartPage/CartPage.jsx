@@ -23,7 +23,6 @@ const CartPage = ({ cart, removeFromCart, clearCart, username }) => {
     const [tax, setTax] = useState(0);
     const [estimatedTotal, setEstimatedTotal] = useState(0);
 
-    // Calculate totals whenever quantities or cart change
     useEffect(() => {
         calculateTotals();
     }, [quantities, cart]);
@@ -37,10 +36,10 @@ const CartPage = ({ cart, removeFromCart, clearCart, username }) => {
 
     const calculateTotals = () => {
         const currentSubtotal = cart.reduce((total, item) => {
-            const quantity = quantities[item._id] || 1; // Default to 1 if not specified
+            const quantity = quantities[item._id] || 1; 
             return total + (item.price * quantity);
         }, 0);
-        const currentTax = currentSubtotal * 0.06; // Assuming 6% tax
+        const currentTax = currentSubtotal * 0.06; 
         const currentEstimatedTotal = currentSubtotal + currentTax;
 
         setSubtotal(currentSubtotal);
@@ -172,7 +171,7 @@ const CartPage = ({ cart, removeFromCart, clearCart, username }) => {
                     setTax(0);
                     setEstimatedTotal(0); 
                     setPickupTime('');
-                    clearCart(); // Clear cart after the modal is closed
+                    clearCart(); 
                 }} className="modal">
                     <h2 className="order-summary">Order Summary</h2>
                     <p>Your order number is: <strong>{orderNumber}</strong></p>

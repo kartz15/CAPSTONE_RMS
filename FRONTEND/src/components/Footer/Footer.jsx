@@ -37,7 +37,6 @@ const Footer = () => {
                         <li><a href="/menu">Order Online</a></li>
                         <li><a href="/menu">View Our Menu</a></li>
                         <li><a href="/register">Join Us!</a></li>
-                        <li><a href="/about">About Us</a></li>
                         <li><a href="/contact">Contact Us</a></li>
                     </ul>
                 </div>

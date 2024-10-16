@@ -4,7 +4,7 @@ const categorySchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
-        unique: true, // Ensures no duplicate categories
+        unique: true, 
     },
     image: {
         type: String, // This will store the image URL
@@ -20,7 +20,7 @@ const categorySchema = new mongoose.Schema({
     },
 });
 
-// Check if the model already exists
+
 const Category = mongoose.models.Category || mongoose.model('Category', categorySchema);
 
 module.exports = Category;

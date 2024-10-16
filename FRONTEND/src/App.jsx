@@ -9,7 +9,6 @@ import LoginPage from './components/LoginPage/LoginPage';
 import CartPage from './components/CartPage/CartPage';
 import Navbar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
-// import OrderSummaryPage from './components/OrderSummaryPage/OrderSummaryPage'; 
 import OrderHistory from './components/OrderHistroy/OrderHistroy';
 import CategoryDishesPage from './components/MenuPage/CategoryDishesPage/CategoryDishesPage';
 
@@ -17,7 +16,7 @@ import './App.css'
 
 
 const App = () => {
-    const navigate = useNavigate(); // Initialize navigate here
+    const navigate = useNavigate();
     const [token, setToken] = useState('');
     const [username, setUsername] = useState('');
     const [cart, setCart] = useState([]);
@@ -45,10 +44,6 @@ const App = () => {
         localStorage.removeItem('username'); 
         navigate('/login'); 
     };
-
-    // const addToCart = (dish) => {
-    //     setCart((prevCart) => [...prevCart, dish]);
-    // };
 
     const addToCart = (dish) => {
         setCart((prevCart) => {
@@ -86,7 +81,6 @@ const App = () => {
                 <Route path="/login" element={token ? <Navigate to={username === "admin" ? "/admin" : "/"} /> : <LoginPage setToken={handleSetToken}/>} />
                 <Route path="/register" element={token ? <Navigate to="/" /> : <RegisterPage />} />
                 <Route path="/cart" element={<CartPage cart={cart} removeFromCart={removeFromCart} clearCart={clearCart} username={username} />} />
-                {/* <Route path="/order-summary/:orderId" element={<OrderSummaryPage />} /> */}
                 <Route path="/order-history" element={<OrderHistory username={username} />} />
                 <Route path="/category/:categoryId" element={<CategoryDishesPage  addToCart={addToCart} />} />
             </Routes>

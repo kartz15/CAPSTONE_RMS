@@ -21,14 +21,9 @@ const dishSchema = new mongoose.Schema({
         type: String, // Cloudinary public ID for the image
         required: true,
     },
-    // category: {
-    //     type: String,
-    //     enum: ['Appetizer', 'Main Course', 'Dessert', 'Beverage'], 
-    //     required: true,
-    // },
     category: {
-        type: mongoose.Schema.Types.ObjectId, // Use ObjectId for referencing
-        ref: 'Category', // Reference the Category model
+        type: mongoose.Schema.Types.ObjectId, 
+        ref: 'Category', 
         required: true,
     },
     createdAt: {
@@ -41,7 +36,6 @@ const dishSchema = new mongoose.Schema({
     },
 });
 
-// Check if the model already exists
 const Dish = mongoose.models.Dish || mongoose.model('Dish', dishSchema);
 
 module.exports = Dish;

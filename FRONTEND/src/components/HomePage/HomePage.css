@@ -69,7 +69,6 @@ body {
     width: 90%; 
     margin: 20px auto;
     padding: 20px;
-    /* border-radius: 8px; */
     text-align: center;
 }
 
@@ -146,7 +145,6 @@ body {
     border-radius: 8px; 
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .menu-images img {
         width: calc(50% - 20px); 

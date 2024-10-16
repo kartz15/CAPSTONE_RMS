@@ -21,9 +21,9 @@ const orderSchema = new mongoose.Schema({
     items: [
         {
             dishId: { type: mongoose.Schema.Types.ObjectId, ref: 'Dish', required: true },
-            dishName: { type: String, required: true }, // Store dish name
-            dishDescription: { type: String, required: true }, // Store dish description
-            dishPrice: { type: Number, required: true }, // Store dish price
+            dishName: { type: String, required: true }, 
+            dishDescription: { type: String, required: true }, 
+            dishPrice: { type: Number, required: true }, 
             quantity: { type: Number, required: true },
         }
     ],

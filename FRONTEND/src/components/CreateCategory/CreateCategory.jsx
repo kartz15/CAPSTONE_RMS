@@ -17,7 +17,7 @@ const AddCategory = ({ onCategoryAdded }) => {
         try {
             const response = await axios.post('http://localhost:5000/api/categories', formData);
             alert('Category added successfully');
-            onCategoryAdded(response.data); // Call the callback to update categories
+            onCategoryAdded(response.data); 
             setName('');
             setImage(null);
         } catch (error) {
