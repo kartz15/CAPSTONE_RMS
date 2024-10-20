@@ -13,7 +13,8 @@ const MenuPage = ({ addToCart }) => {
     useEffect(() => {
         const fetchDishes = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/dishes');
+                // const response = await axios.get('http://localhost:5000/api/dishes');
+                const response = await axios.get('https://capstone-rms.onrender.com/api/dishes');
                 setDishes(response.data);
             } catch (err) {
                 console.error('Error fetching dishes:', err);
@@ -23,7 +24,8 @@ const MenuPage = ({ addToCart }) => {
 
         const fetchCategories = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/categories');
+                // const response = await axios.get('http://localhost:5000/api/categories');
+                const response = await axios.get('https://capstone-rms.onrender.com/api/categories');
                 setCategories(response.data);
             } catch (error) {
                 console.error('Failed to fetch categories:', error);
