@@ -20,7 +20,9 @@ const AdminPage = () => {
     useEffect(() => {
         const fetchCategories = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/categories');
+                // const response = await axios.get('http://localhost:5000/api/categories');
+                const response = await axios.get(' https://capstone-rms.onrender.com/api/categories');
+               
                 setCategories(response.data);
             } catch (error) {
                 console.error('Error fetching categories:', error);
@@ -29,7 +31,8 @@ const AdminPage = () => {
 
         const fetchDishes = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/dishes');
+                // const response = await axios.get('http://localhost:5000/api/dishes');
+                const response = await axios.get(' https://capstone-rms.onrender.com/api/dishes');     
                 // const response = await axios.get(`http://localhost:5000/api/dishes${category ? `?category=${category}` : ''}`);
                 setDishes(response.data);
             } catch (error) {
@@ -59,7 +62,9 @@ const AdminPage = () => {
         const confirmDelete = window.confirm('Are you sure you want to delete this dish?');
         if (confirmDelete) {
             try {
-                await axios.delete(`http://localhost:5000/api/dishes/${id}`);
+                // await axios.delete(`http://localhost:5000/api/dishes/${id}`);
+                await axios.delete(` https://capstone-rms.onrender.com/api/dishes/${id}`);
+               
                 setDishes((prevDishes) => prevDishes.filter(dish => dish._id !== id));
                 showSuccessMessage('Dish deleted successfully!');
   
@@ -89,14 +94,18 @@ const AdminPage = () => {
         
         try {
             if (editingDishId) {
-                const response = await axios.put(`http://localhost:5000/api/dishes/${editingDishId}`, formData);
+                // const response = await axios.put(`http://localhost:5000/api/dishes/${editingDishId}`, formData);
+                const response = await axios.put(`  https://capstone-rms.onrender.com/api/dishes/${editingDishId}`, formData);
+              
                 const updatedDish = response.data;
                 setDishes((prevDishes) =>
                     prevDishes.map((dish) => (dish._id === editingDishId ? updatedDish : dish))
                 );
                 alert('Dish updated successfully!');
             } else {
-                const response = await axios.post('http://localhost:5000/api/dishes', formData);
+                // const response = await axios.post('http://localhost:5000/api/dishes', formData);
+                const response = await axios.post(' https://capstone-rms.onrender.com/api/dishes', formData);
+               
                 const newDish = response.data;
                 setDishes((prevDishes) => [...prevDishes, newDish]);
                 alert('Dish added successfully!');

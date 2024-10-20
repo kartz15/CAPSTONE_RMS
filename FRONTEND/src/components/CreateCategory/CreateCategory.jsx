@@ -15,7 +15,8 @@ const AddCategory = ({ onCategoryAdded }) => {
         }
 
         try {
-            const response = await axios.post('http://localhost:5000/api/categories', formData);
+            // const response = await axios.post('http://localhost:5000/api/categories', formData);
+            const response = await axios.post('https://capstone-rms.onrender.com/api/categories', formData);
             alert('Category added successfully');
             onCategoryAdded(response.data); 
             setName('');

@@ -68,7 +68,8 @@ const CartPage = ({ cart, removeFromCart, clearCart, username }) => {
 
         let userId;
         try {
-            const userResponse = await axios.get(`http://localhost:5000/api/users`, { params: { username } });
+            // const userResponse = await axios.get(`http://localhost:5000/api/users`, { params: { username } });
+            const userResponse = await axios.get(`https://capstone-rms.onrender.com/api/users`, { params: { username } });
             userId = userResponse.data._id; 
         } catch (error) {
             setError(`Error fetching user ID: ${error.message}`);
@@ -88,7 +89,8 @@ const CartPage = ({ cart, removeFromCart, clearCart, username }) => {
         };
 
         try {
-            const response = await axios.post('http://localhost:5000/api/orders', orderData);
+            // const response = await axios.post('http://localhost:5000/api/orders', orderData);
+            const response = await axios.post('https://capstone-rms.onrender.com/api/orders', orderData);
             const orderNumber = response.data._id;
             setOrderNumber(orderNumber);
             setOrderDetails(orderData.items); 

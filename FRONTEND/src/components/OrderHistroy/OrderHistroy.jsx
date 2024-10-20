@@ -11,7 +11,8 @@ const OrderHistory = ({ username }) => {
         const fetchOrders = async () => {
             setLoading(true);
             try {
-                const response = await axios.get(`http://localhost:5000/api/orders/user/${username}`);
+                // const response = await axios.get(`http://localhost:5000/api/orders/user/${username}`);
+                const response = await axios.get(`https://capstone-rms.onrender.com/api/orders/user/${username}`);
                 setOrders(response.data);
             } catch (error) {
                 setError('Error fetching orders. Please try again later.');
