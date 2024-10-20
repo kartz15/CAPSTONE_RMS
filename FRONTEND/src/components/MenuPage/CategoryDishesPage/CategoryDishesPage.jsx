@@ -17,7 +17,7 @@ const CategoryDishesPage = ({ addToCart }) => {
         const fetchDishesByCategory = async () => {
             try {
                 // const response = await axios.get(`http://localhost:5000/api/dishes/cat/${categoryId}`);
-                const response = await axios.get(`https://capstone-rms.onrender.com/api/cat/${categoryId}`);
+                const response = await axios.get(`https://capstone-rms.onrender.com/api/dishes/cat/${categoryId}`);
                 setDishes(response.data);
             } catch (err) {
                 console.error('Error fetching dishes:', err);
